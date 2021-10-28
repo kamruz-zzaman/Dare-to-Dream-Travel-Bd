@@ -15,70 +15,53 @@ const Footer = () => {
                     </div>
                     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><i class="fas fa-map-marked-alt"></i>Address</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">First Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Second Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Third Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Fourth Link</Link>
+                                    <p className="text-black hover:text-gray-800">ShareTrip Ltd
+                                        3rd Floor, Taneem Square
+                                        158/E, Kemal Ataturk Avenue, Banani, Dhaka 1213, Bangladesh</p>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><i class="far fa-address-book"></i>CONTACT</h2>
+                            <nav className="list-none mb-10">
+                                <li><p className='font-bold'><i class="fas fa-envelope "></i> faq@daredream.com</p></li>
+                                <li><p className='font-bold'><i class="fas fa-phone-alt "></i> +88099999999</p></li>
+                            </nav>
+                        </div>
+                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><i class="fas fa-external-link-square-alt"></i>USEFUL LINKS</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">First Link</Link>
+                                    <Link className="text-black hover:text-gray-400">About Us</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Second Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Blogs</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Third Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Air Tickets</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Fourth Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Destinations</Link>
                                 </li>
                             </nav>
                         </div>
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"><i class="fas fa-question-circle"></i>HELP</h2>
                             <nav className="list-none mb-10">
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">First Link</Link>
+                                    <Link className="text-black hover:text-gray-400">FAQ</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Second Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Support Center</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Third Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Payment Security</Link>
                                 </li>
                                 <li>
-                                    <Link className="text-black hover:text-gray-800">Fourth Link</Link>
-                                </li>
-                            </nav>
-                        </div>
-                        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                            <nav className="list-none mb-10">
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">First Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Second Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Third Link</Link>
-                                </li>
-                                <li>
-                                    <Link className="text-black hover:text-gray-800">Fourth Link</Link>
+                                    <Link className="text-black hover:text-gray-400">Privacy Policy</Link>
                                 </li>
                             </nav>
                         </div>
