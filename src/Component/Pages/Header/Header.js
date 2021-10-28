@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FirebaseAuth from '../../../Hooks/FirebaseAuth';
 import img from '../../../Images/Header-logo.png'
 
 const Header = () => {
+    const { user, logOut } = FirebaseAuth();
+    console.log(user);
     return (
         <>
             <header className="text-gray-600 body-font bg-yellow-400">
@@ -15,8 +18,18 @@ const Header = () => {
                         <Link className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Second Link</Link>
                         <Link className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Third Link</Link>
                         <Link className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Fourth Link</Link>
+
                     </nav>
-                    <Link to='/login'><button className="inline-flex items-center text-black font-bold bg-white hover:bg-yellow-400 px-5 py-2 rounded-md">Login</button></Link>
+                    {
+                        user.email ?
+                            <div className='flex items-center'>
+                                <img className='rounded-full  w-8 h-8 mr-1' src={user.photoURL} alt="" />
+                                <p className='mr-2 font-bold'>{user.displayName}</p>
+                                <button onClick={logOut} className="inline-flex items-center text-black font-bold bg-white hover:bg-yellow-400 px-5 py-2 rounded-md">Logout</button>
+                            </div>
+                            :
+                            <Link to='/login'><button className="inline-flex items-center text-black font-bold bg-white hover:bg-yellow-400 px-5 py-2 rounded-md">Login</button></Link>
+                    }
                 </div>
             </header>
         </>
