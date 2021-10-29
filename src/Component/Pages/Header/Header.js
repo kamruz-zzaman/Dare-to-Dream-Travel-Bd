@@ -13,11 +13,14 @@ const Header = () => {
                         <img src={img} className='' alt="" />
                     </Link>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <Link to='/home' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Home</Link>
-                        <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Plans</Link>
-                        <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">About</Link>
-                        <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Gellary</Link>
-                        <Link to='/contuct' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Contact</Link>
+                        <Link to='/home' className="mr-2 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Home</Link>
+                        <Link to='/package' className="mr-2 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Packages</Link>
+                        <Link to='' className="mr-2 text-black font-bold hover:bg-white px-5 py-2 rounded-md">About</Link>
+                        <Link to='/gellery' className="mr-2 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Gellary</Link>
+                        <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">Contact</Link>
+                        <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">My Booking</Link>
+                        <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">All Booking</Link>
+                        <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">Add Package</Link>
 
                     </nav>
                     {

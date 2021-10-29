@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img from '../../../Images/Stranded traveler-pana.svg'
 
 const Banner = () => {
@@ -10,7 +11,7 @@ const Banner = () => {
                     <div className='text-left'>
                         <h1 className='text-5xl font-bold animate__animated animate__fadeInRight'>Lifelong memories just a few seconds away.</h1>
                         <p className='text-2xl mt-10 animate__animated animate__fadeInRight'>Let's start your journey with us, your dream will come true.</p>
-                        <button className='mt-10 bg-yellow-400 rounded-lg px-5 py-3 hover:bg-white font-bold border-2 animate__animated animate__fadeInRight'>Explore Destination</button>
+                        <Link to='/package'><button className='mt-10 bg-yellow-400 rounded-lg px-5 py-3 hover:bg-white font-bold border-2 animate__animated animate__fadeInRight'>Explore Destination</button></Link>
                     </div>
                 </div>
             </div>
