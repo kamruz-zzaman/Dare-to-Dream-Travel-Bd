@@ -5,7 +5,6 @@ import img from '../../../Images/Header-logo.png'
 
 const Header = () => {
     const { user, logOut } = FirebaseAuth();
-    console.log(user);
     return (
         <>
             <header className="text-gray-600 body-font bg-yellow-400">
@@ -18,6 +17,7 @@ const Header = () => {
                         <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Plans</Link>
                         <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">About</Link>
                         <Link to='' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Gellary</Link>
+                        <Link to='/contuct' className="mr-5 text-black font-bold hover:bg-white px-5 py-2 rounded-md">Contact</Link>
 
                     </nav>
                     {
