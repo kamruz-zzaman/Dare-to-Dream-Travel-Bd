@@ -8,6 +8,7 @@ import Banner from './Component/Pages/Banner/Banner';
 import Error404 from './Component/Pages/Error404/Error404';
 import ContuctUs from './Component/Pages/Contuct Us/ContuctUs';
 import Packages from './Component/Pages/Packages/Packages';
+import AddPackage from './Component/Pages/Add Packages/AddPackage';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path='/gellery'>
           <Gellery></Gellery>
+        </Route>
+        <Route path='/addpackage'>
+          <AddPackage></AddPackage>
         </Route>
         <Route path='*'>
           <Error404></Error404>

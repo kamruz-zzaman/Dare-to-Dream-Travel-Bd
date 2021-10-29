@@ -20,7 +20,7 @@ const Header = () => {
                         <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">Contact</Link>
                         <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">My Booking</Link>
                         <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">All Booking</Link>
-                        <Link to='/contuct' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">Add Package</Link>
+                        <Link to='/addpackage' className=" text-black font-bold hover:bg-white px-5 py-2 rounded-md">Add Package</Link>
 
                     </nav>
                     {
