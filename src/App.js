@@ -9,6 +9,7 @@ import Error404 from './Component/Pages/Error404/Error404';
 import ContuctUs from './Component/Pages/Contuct Us/ContuctUs';
 import Packages from './Component/Pages/Packages/Packages';
 import AddPackage from './Component/Pages/Add Packages/AddPackage';
+import FullPackages from './Component/Pages/Packages/FullPackages';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
           <ContuctUs></ContuctUs>
         </Route>
         <Route path='/package'>
-          <Packages></Packages>
+          <FullPackages></FullPackages>
         </Route>
         <Route path='/gellery'>
           <Gellery></Gellery>

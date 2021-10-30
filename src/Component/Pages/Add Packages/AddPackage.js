@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 const AddPackage = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         fetch('http://localhost:5000/packages', {
             method: 'POST',
@@ -14,24 +14,29 @@ const AddPackage = () => {
                     alert('package added successfully')
                 }
             })
-
+        reset();
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col sm:1/2 md:w-1/3 mx-auto my-5'>
-            <input className='border-2 border-black py-2 px-2' placeholder='Img Url' {...register("Img")} /> <br />
-            <input className='border-2 border-black py-2 px-2' placeholder='Name' {...register("Name", { required: true })} /> <br />
-            <input className='border-2 border-black py-2 px-2' placeholder='Description' {...register("Description", { required: true })} /> <br />
-            <input className='border-2 border-black py-2 px-2' placeholder='Price' {...register("Price", { required: true })} /> <br />
-            <input className='border-2 border-black py-2 px-2' placeholder='Offer-Price' {...register("OfferPrice", { required: true })} /> <br />
-            <input className='border-2 border-black py-2 px-2' placeholder='Duration' {...register("Time", { required: true })} /> <br />
-            {errors.Img && <span className='text-red-400'>Img is required</span>}
-            {errors.Name && <span className='text-red-400'>Name required</span>}
-            {errors.Description && <span className='text-red-400'>Description required</span>}
-            {errors.Price && <span className='text-red-400'>Price is required</span>}
-            {errors.OfferPrice && <span className='text-red-400'>Offer-Price required</span>}
-            {errors.Time && <span className='text-red-400'>Duration is required</span>}
-            <input type="submit" className='py-2 border border-yellow-400 bg-yellow-400 active:bg-white' />
-        </form>
+        <div>
+            <p className='text-center text-2xl font-bold mt-5'>Add your Tour Package</p>
+            <div className='flex justify-center'>
+                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col  lg:w-96 my-5'>
+                    <input type="url" className='border-black focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md  py-2 px-2' placeholder='Img Url' {...register("Img")} /> <br />
+                    <input className=' border-black py-2 px-2 focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md' placeholder='Name' {...register("Name", { required: true })} /> <br />
+                    <textarea className=' border-black py-2 px-2 focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md' placeholder='Description' {...register("Description", { required: true })} /> <br />
+                    <input type="number" className=' border-black py-2 px-2 focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md' placeholder='Price' {...register("Price", { required: true })} /> <br />
+                    <input type="number" className=' border-black py-2 px-2 focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md' placeholder='Offer-Price' {...register("OfferPrice", { required: true })} /> <br />
+                    <input className=' border-black py-2 px-2 focus:ring-2 focus:ring-yellow-400 focus:border-transparent border-2 rounded-md' placeholder='Duration' {...register("Time", { required: true })} /> <br />
+                    {errors.Img && <span className='text-red-400'>Img is required</span>}
+                    {errors.Name && <span className='text-red-400'>Name required</span>}
+                    {errors.Description && <span className='text-red-400'>Description required</span>}
+                    {errors.Price && <span className='text-red-400'>Price is required</span>}
+                    {errors.OfferPrice && <span className='text-red-400'>Offer-Price required</span>}
+                    {errors.Time && <span className='text-red-400'>Duration is required</span>}
+                    <input type="submit" className='py-2 border border-yellow-400 bg-yellow-400 active:bg-white' />
+                </form>
+            </div>
+        </div>
     );
 };
 
