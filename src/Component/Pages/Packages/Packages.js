@@ -18,7 +18,7 @@ const Packages = () => {
                 {
                     packages.map(pakage =>
                         <Package
-                            key={pakage.Key}
+                            key={pakage._id}
                             package={pakage}
                         >
                         </Package>)
