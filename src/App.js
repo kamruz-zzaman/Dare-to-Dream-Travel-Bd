@@ -14,6 +14,7 @@ import Booking from './Component/Pages/Booking/Booking';
 import MyBokings from './Component/Pages/My Booking/MyBokings';
 import AuthProvider from './Component/Contex/AuthProvider';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
+import BookNow from './Component/Pages/BookNow/BookNow';
 
 function App() {
   return (
@@ -48,12 +49,15 @@ function App() {
           <Route path='/addpackage'>
             <AddPackage></AddPackage>
           </Route>
-          <PrivateRoute path='/booking'>
+          <Route path='/booking'>
             <Booking></Booking>
-          </PrivateRoute>
+          </Route>
           <Route path='/mybooking'>
             <MyBokings></MyBokings>
           </Route>
+          <PrivateRoute path='/packages/:id'>
+            <BookNow></BookNow>
+          </PrivateRoute>
           <Route path='*'>
             <Error404></Error404>
           </Route>

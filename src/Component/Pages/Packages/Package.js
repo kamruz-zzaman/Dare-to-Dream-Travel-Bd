@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Package = (props) => {
-    const { Img, Name, Description, Price, OfferPrice, Time } = props.package;
+    const { _id, Img, Name, Description, Price, OfferPrice, Time } = props.package;
     return (
         <div className=' mt-10 shadow-2xl border hover:border-yellow-400 h-full rounded-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
             <div>
@@ -21,7 +21,7 @@ const Package = (props) => {
                     </div>
                     <div className='flex justify-center items-center'>
                         <div className='fixed bottom-5'>
-                            <Link to=''><button className=' bg-yellow-400 text-black border font-bold border-yellow-400 px-3 py-2 rounded-xl hover:bg-white transition ease-in duration-300 '>Book Now</button></Link>
+                            <Link to={`packages/${_id}`}><button className=' bg-yellow-400 text-black border font-bold border-yellow-400 px-3 py-2 rounded-xl hover:bg-white transition ease-in duration-300 '>Book Now</button></Link>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import useAuth from '../../../Hooks/useAuth';
 
-const Booking = () => {
+const Booking = (props) => {
+    const { Name, Price } = props.data;
+    const { user } = useAuth();
     const { register, handleSubmit, reset, setValue } = useForm();
     const onSubmit = data => {
         fetch('http://localhost:5000/booking', {
@@ -17,6 +20,7 @@ const Booking = () => {
                     alert('Your Booking Now on Pending')
                 }
             })
+        console.log(data);
         reset();
     }
     return (
@@ -29,14 +33,14 @@ const Booking = () => {
                     <div>
                         <label className="text-xl font-bold mb-1">Package Name</label>
                         <div >
-                            <input type="text" id="p-name"{...register("Destination", { required: true })} className="border-2  px-8 py-1 rounded-xl w-full"
+                            <input value={Name} type="text" id="p-name"{...register("Destination", { required: true })} className="border-2  px-8 py-1 rounded-xl w-full"
                                 placeholder="Package Name" />
                         </div>
                     </div>
                     <div>
                         <label className="text-xl font-bold mb-1">Your-Name</label>
                         <div >
-                            <input type="text" id="u-name"{...register("Name", { required: true })} className="border-2  px-8 py-1 rounded-xl w-full"
+                            <input value={user.displayName} type="text" id="u-name"{...register("Name", { required: true })} className="border-2  px-8 py-1 rounded-xl w-full"
                                 placeholder="Your Name" />
                         </div>
                     </div>
@@ -50,7 +54,7 @@ const Booking = () => {
                     <div className="form-group row">
                         <label className="text-xl font-bold mb-1">E-mail</label>
                         <div>
-                            <input type="e-mail" id="mail"{...register("Email")} className="border-2  px-8 py-1 rounded-xl w-full"
+                            <input value={user.email} type="e-mail" id="mail"{...register("Email")} className="border-2  px-8 py-1 rounded-xl w-full"
                                 placeholder="Something@click.com" />
                         </div>
                     </div>
@@ -75,10 +79,18 @@ const Booking = () => {
                             <input type="time" id="time"{...register("TourStartTime", { required: true })} className="border-2  px-10 py-1 rounded-xl w-full" />
                         </div>
                     </div>
+                    <div >
+                        <label className="text-xl font-bold mb-1">
+                            Price
+                        </label>
+                        <div >
+                            <input value={Price} id="time"{...register("Price", { required: true })} className="border-2  px-10 py-1 rounded-xl w-full" />
+                        </div>
+                    </div>
                     <div className="flex justify-center">
                         <button className='py-2 px-3 rounded-lg border-2 border-yellow-400 mt-5 hover:bg-yellow-400 hover:text-white'>Confirm</button>
                     </div>
-                    {setValue("Satatus", "Pending")}
+                    {setValue("Status", "Pending")}
                 </form>
             </div>
         </div>

@@ -2,15 +2,16 @@ import React from 'react';
 import logo from '../../../Images/Header-logo.png'
 import img from '../../../Images/google-logo.png'
 import useAuth from '../../../Hooks/useAuth';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     const history = useHistory();
+    const location = useLocation();
     const { user, signinWithGoogle } = useAuth();
+    const redirect_URI = location.state?.from || '/home'
     if (user.email) {
-        history.push('/home')
+        history.push(redirect_URI);
     }
-    console.log(history);
     return (
         <div className='flex justify-center items-center' >
             <div>

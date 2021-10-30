@@ -25,7 +25,7 @@ const Packages = () => {
                 }
             </div>
             <div className='flex justify-center items-center mt-20'>
-                <Link to='package'><button className=' hover:bg-yellow-400 text-black border font-bold border-yellow-400 px-3 py-2 rounded-xl bg-white transition ease-in duration-300 '>More Packages...</button></Link>
+                <Link to='/package'><button className=' hover:bg-yellow-400 text-black border font-bold border-yellow-400 px-3 py-2 rounded-xl bg-white transition ease-in duration-300 '>More Packages...</button></Link>
             </div>
         </div>
     );

@@ -7,8 +7,7 @@ const FullPackages = () => {
         fetch('http://localhost:5000/packages')
             .then(res => res.json())
             .then(data => setPackages(data));
-    }, [])
-    console.log(packages);
+    }, []);
     return (
         <div>
             <div className='text-center m-5'>
