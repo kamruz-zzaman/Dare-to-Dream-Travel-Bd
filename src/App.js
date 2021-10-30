@@ -10,45 +10,57 @@ import ContuctUs from './Component/Pages/Contuct Us/ContuctUs';
 import Packages from './Component/Pages/Packages/Packages';
 import AddPackage from './Component/Pages/Add Packages/AddPackage';
 import FullPackages from './Component/Pages/Packages/FullPackages';
+import Booking from './Component/Pages/Booking/Booking';
+import MyBokings from './Component/Pages/My Booking/MyBokings';
+import AuthProvider from './Component/Contex/AuthProvider';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header></Header>
-      <Switch>
-        <Route exact path='/'>
-          <Banner></Banner>
-          <Packages></Packages>
-          <Gellery></Gellery>
-          <ContuctUs></ContuctUs>
-        </Route>
-        <Route exact path='/home'>
-          <Banner></Banner>
-          <Packages></Packages>
-          <Gellery></Gellery>
-          <ContuctUs></ContuctUs>
-        </Route>
-        <Route path='/login'>
-          <Login></Login>
-        </Route>
-        <Route path='/contuct'>
-          <ContuctUs></ContuctUs>
-        </Route>
-        <Route path='/package'>
-          <FullPackages></FullPackages>
-        </Route>
-        <Route path='/gellery'>
-          <Gellery></Gellery>
-        </Route>
-        <Route path='/addpackage'>
-          <AddPackage></AddPackage>
-        </Route>
-        <Route path='*'>
-          <Error404></Error404>
-        </Route>
-      </Switch>
-      <Footer></Footer>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Header></Header>
+        <Switch>
+          <Route exact path='/'>
+            <Banner></Banner>
+            <Packages></Packages>
+            <Gellery></Gellery>
+            <ContuctUs></ContuctUs>
+          </Route>
+          <Route exact path='/home'>
+            <Banner></Banner>
+            <Packages></Packages>
+            <Gellery></Gellery>
+            <ContuctUs></ContuctUs>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='/contuct'>
+            <ContuctUs></ContuctUs>
+          </Route>
+          <Route path='/package'>
+            <FullPackages></FullPackages>
+          </Route>
+          <Route path='/gellery'>
+            <Gellery></Gellery>
+          </Route>
+          <Route path='/addpackage'>
+            <AddPackage></AddPackage>
+          </Route>
+          <PrivateRoute path='/booking'>
+            <Booking></Booking>
+          </PrivateRoute>
+          <Route path='/mybooking'>
+            <MyBokings></MyBokings>
+          </Route>
+          <Route path='*'>
+            <Error404></Error404>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

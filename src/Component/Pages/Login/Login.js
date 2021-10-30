@@ -1,10 +1,16 @@
 import React from 'react';
 import logo from '../../../Images/Header-logo.png'
 import img from '../../../Images/google-logo.png'
-import FirebaseAuth from '../../../Hooks/FirebaseAuth';
+import useAuth from '../../../Hooks/useAuth';
+import { useHistory } from 'react-router';
 
 const Login = () => {
-    const { signinWithGoogle } = FirebaseAuth()
+    const history = useHistory();
+    const { user, signinWithGoogle } = useAuth();
+    if (user.email) {
+        history.push('/home')
+    }
+    console.log(history);
     return (
         <div className='flex justify-center items-center' >
             <div>

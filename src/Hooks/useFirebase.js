@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import firebaseAuthInit from "../Component/Firebase/Firebase.init";
 firebaseAuthInit();
 
-const FirebaseAuth = () => {
+const useFirebase = () => {
     const auth = getAuth();
     const [user, setUser] = useState({});
 
@@ -56,4 +56,4 @@ const FirebaseAuth = () => {
     };
 };
 
-export default FirebaseAuth;
+export default useFirebase;
