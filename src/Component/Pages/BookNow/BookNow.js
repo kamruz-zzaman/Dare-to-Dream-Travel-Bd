@@ -6,7 +6,7 @@ const BookNow = () => {
     const { id } = useParams();
     const [bookData, setBookData] = useState([]);
     useEffect(() => {
-        fetch(`https://dark-tomb-38660.herokuapp.com/${id}`)
+        fetch(`https://dark-tomb-38660.herokuapp.com/packages/${id}`)
             .then(res => res.json())
             .then(data => setBookData(data))
     }, []);

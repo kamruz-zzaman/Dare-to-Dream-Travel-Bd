@@ -29,7 +29,7 @@ const ALLBookings = () => {
     const handleUpdateUser = (id) => {
         const confirm = window.confirm('Are you sure for Approve Booking?');
         if (confirm) {
-            fetch(`https://dark-tomb-38660.herokuapp.com/${id}`, {
+            fetch(`https://dark-tomb-38660.herokuapp.com/booking/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -50,9 +50,8 @@ const ALLBookings = () => {
     return (
         <>
             {
-                myBooking.length === 0 ? <Spinner></Spinner> :
-
-                    myBooking[0] ?
+                myBooking[0] ?
+                    myBooking.length === 0 ? <Spinner></Spinner> :
                         <div className='overflow-x-auto'>
                             <table class="table-auto mx-5 mt-10 ">
                                 <thead>
@@ -80,10 +79,10 @@ const ALLBookings = () => {
                                 </tbody>
                             </table>
                         </div>
-                        :
-                        <div className='h-96 text-gray-400'>
-                            <p className='text-center text-6xl '>No Booking Added</p>
-                        </div>
+                    :
+                    <div className='h-96 text-gray-400'>
+                        <p className='text-center text-6xl '>No Booking Added</p>
+                    </div>
 
             }
 

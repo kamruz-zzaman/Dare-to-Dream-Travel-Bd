@@ -14,7 +14,7 @@ const MyBooking = () => {
     const handleDeletUser = (id) => {
         const delet = window.confirm('Are Your Sure For Delation?');
         if (delet) {
-            fetch(`https://dark-tomb-38660.herokuapp.com/${id}`, {
+            fetch(`https://dark-tomb-38660.herokuapp.com/booking/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -31,22 +31,22 @@ const MyBooking = () => {
     return (
         <>
             {
-                myBooking.length === 0 ? <Spinner></Spinner> :
-                    myBooking[0] ?
+                myBooking[0] ?
+                    myBooking.length === 0 ? <Spinner></Spinner> :
                         <div className='overflow-x-auto'>
-                            <table class="table-fixed mx-5 mt-10 overflow-x-auto">
+                            <table class="table-auto mx-5 mt-10 ">
                                 <thead>
                                     <tr>
-                                        <th class="w-1/2 ">Name</th>
-                                        <th class="w-1/4 ">DESTINATION</th>
-                                        <th class="w-1/8 ">STATUS</th>
-                                        <th class="w-1/4 ">Tour Start Date</th>
-                                        <th class="w-1/8 ">ACTIONS</th>
+                                        <th class="w-1/2 sm:text-xs ">Name</th>
+                                        <th class="w-1/4 sm:text-xs">DESTINATION</th>
+                                        <th class="w-1/8 sm:text-xs">STATUS</th>
+                                        <th class="w-1/4 sm:text-xs">Tour Start Date</th>
+                                        <th class="w-1/8 sm:text-xs">ACTIONS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        myBooking.filter(data => data.Email === user.email).map(booking =>
+                                        myBooking.map(booking =>
                                             <MyBookingComp
                                                 key={booking._id}
                                                 booking={booking}
@@ -59,10 +59,11 @@ const MyBooking = () => {
                                 </tbody>
                             </table>
                         </div>
-                        :
-                        <div className='h-96 text-gray-400'>
-                            <p className='text-center text-6xl '>No Booking Added</p>
-                        </div>
+                    :
+                    <div className='h-96 text-gray-400'>
+                        <p className='text-center text-6xl '>No Booking Added</p>
+                    </div>
+
             }
         </>
     );
