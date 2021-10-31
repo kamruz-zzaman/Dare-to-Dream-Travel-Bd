@@ -4,14 +4,12 @@ import Booking from '../Booking/Booking';
 
 const BookNow = () => {
     const { id } = useParams();
-    console.log(id);
     const [bookData, setBookData] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${id}`)
+        fetch(`https://dark-tomb-38660.herokuapp.com/${id}`)
             .then(res => res.json())
             .then(data => setBookData(data))
-    }, [])
-    console.log(bookData);
+    }, []);
     return (
         <>
             <Booking

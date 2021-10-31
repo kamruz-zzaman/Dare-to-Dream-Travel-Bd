@@ -11,10 +11,11 @@ import Packages from './Component/Pages/Packages/Packages';
 import AddPackage from './Component/Pages/Add Packages/AddPackage';
 import FullPackages from './Component/Pages/Packages/FullPackages';
 import Booking from './Component/Pages/Booking/Booking';
-import MyBokings from './Component/Pages/My Booking/MyBokings';
 import AuthProvider from './Component/Contex/AuthProvider';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import BookNow from './Component/Pages/BookNow/BookNow';
+import ALLBookings from './Component/Pages/AllBooking/ALLBookings';
+import MyBooking from './Component/Pages/MyBookings/MyBooking';
 
 function App() {
   return (
@@ -53,7 +54,10 @@ function App() {
             <Booking></Booking>
           </Route>
           <Route path='/mybooking'>
-            <MyBokings></MyBokings>
+            <MyBooking></MyBooking>
+          </Route>
+          <Route path='/allBoking'>
+            <ALLBookings></ALLBookings>
           </Route>
           <PrivateRoute path='/packages/:id'>
             <BookNow></BookNow>

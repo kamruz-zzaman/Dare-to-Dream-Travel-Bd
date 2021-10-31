@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import img from '../../../Images/Header-logo.png'
 
@@ -14,14 +14,13 @@ const Header = () => {
                     </Link>
                     {
                         user.email ? <> <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                            <Link to='/home' className="mr-1 text-black font-bold hover:bg-white px-5 py-1 rounded-md">Home</Link>
-                            <Link to='/package' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Packages</Link>
-                            <Link to='' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">About</Link>
-                            <Link to='/gellery' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Gellary</Link>
-                            <Link to='/contuct' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Contact</Link>
-                            <Link to='/mybooking' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">My Booking</Link>
-                            <Link to='/contuct' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">All Booking</Link>
-                            <Link to='/addpackage' className=" text-black font-bold hover:bg-white px-2 py-2 rounded-md">Add Package</Link>
+                            <NavLink to='/home' className="mr-1 text-black font-bold hover:bg-white px-5 py-1 rounded-md" activeClassName="bg-white">Home</NavLink>
+                            <NavLink to='/package' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Packages</NavLink>
+                            <NavLink to='/gellery' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Gellary</NavLink>
+                            <NavLink to='/contuct' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Contact</NavLink>
+                            <NavLink to='/mybooking' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">My Booking</NavLink>
+                            <NavLink to='/allBoking' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">All Booking</NavLink>
+                            <NavLink to='/addpackage' className=" text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Add Package</NavLink>
 
                         </nav>
                             <div className='flex items-center'>
@@ -30,11 +29,10 @@ const Header = () => {
                                 <button onClick={logOut} className="inline-flex items-center text-black font-bold bg-white hover:bg-yellow-400 px-5 py-2 rounded-md">Logout</button>
                             </div></> : <>
                             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                                <Link to='/home' className="mr-1 text-black font-bold hover:bg-white px-5 py-1 rounded-md">Home</Link>
-                                <Link to='/package' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Packages</Link>
-                                <Link to='' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">About</Link>
-                                <Link to='/gellery' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Gellary</Link>
-                                <Link to='/contuct' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md">Contact</Link>
+                                <NavLink to='/home' className="mr-1 text-black font-bold hover:bg-white px-5 py-1 rounded-md" activeClassName="bg-white">Home</NavLink>
+                                <NavLink to='/package' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Packages</NavLink>
+                                <NavLink to='/gellery' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Gellary</NavLink>
+                                <NavLink to='/contuct' className="mr-1 text-black font-bold hover:bg-white px-2 py-2 rounded-md" activeClassName="bg-white">Contact</NavLink>
 
                             </nav>
                             <div>

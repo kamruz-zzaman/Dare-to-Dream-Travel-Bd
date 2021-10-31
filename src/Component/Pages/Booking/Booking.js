@@ -1,13 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
 
 const Booking = (props) => {
+    const history = useHistory()
     const { Name, Price } = props.data;
     const { user } = useAuth();
     const { register, handleSubmit, reset, setValue } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/booking', {
+        fetch('https://dark-tomb-38660.herokuapp.com/booking', {
 
             method: 'POST',
             headers: {
@@ -18,9 +20,9 @@ const Booking = (props) => {
             .then(res => {
                 if (res.ok) {
                     alert('Your Booking Now on Pending')
+                    history.push('/mybooking')
                 }
             })
-        console.log(data);
         reset();
     }
     return (
