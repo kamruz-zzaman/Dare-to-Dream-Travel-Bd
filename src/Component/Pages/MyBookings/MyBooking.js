@@ -33,14 +33,14 @@ const MyBooking = () => {
                 myBooking[0] ?
                     myBooking.length === 0 ? <Spinner></Spinner> :
                         <div className='overflow-x-auto'>
-                            <table class="table-auto mx-5 mt-10 ">
+                            <table className="table-auto mx-5 mt-10 ">
                                 <thead>
                                     <tr>
-                                        <th class="w-1/2 sm:text-xs ">Name</th>
-                                        <th class="w-1/4 sm:text-xs">DESTINATION</th>
-                                        <th class="w-1/8 sm:text-xs">STATUS</th>
-                                        <th class="w-1/4 sm:text-xs">Tour Start Date</th>
-                                        <th class="w-1/8 sm:text-xs">ACTIONS</th>
+                                        <th className="w-1/2 sm:text-xs ">Name</th>
+                                        <th className="w-1/4 sm:text-xs">DESTINATION</th>
+                                        <th className="w-1/8 sm:text-xs">STATUS</th>
+                                        <th className="w-1/4 sm:text-xs">Tour Start Date</th>
+                                        <th className="w-1/8 sm:text-xs">ACTIONS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
