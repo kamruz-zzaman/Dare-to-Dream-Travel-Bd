@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
 const AddPackage = () => {
+    // call usehistory
     const history = useHistory();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        // fetching post data
         fetch('https://dark-tomb-38660.herokuapp.com/packages', {
             method: 'POST',
             headers: {
@@ -12,6 +14,7 @@ const AddPackage = () => {
             body: JSON.stringify(data)
         })
             .then(res => {
+                // make response after post
                 if (res.ok) {
                     alert('package added successfully')
                     history.push('/package')

@@ -1,3 +1,4 @@
+// Adding firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBbsyVnIU4BzIenMrWjcdg_T-7wHw89HC8",
     authDomain: "dare-to-dream-travel-bd.firebaseapp.com",

@@ -1,3 +1,4 @@
+// initialize firebase and exprt
 import { initializeApp } from "firebase/app";
 import firebaseConfig from "./firebase.config";
 

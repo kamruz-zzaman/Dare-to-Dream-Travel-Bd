@@ -3,6 +3,7 @@ import React from 'react';
 const ALLBooking = (props) => {
     const deletUser = props.deletUser;
     const updateStatus = props.updateStatus;
+    // distructuring booking data
     const { _id, Destination, Name, TourStartDate, Status, Email } = props.booking;
     return (
         <tr className='border-2 w-1/2'>

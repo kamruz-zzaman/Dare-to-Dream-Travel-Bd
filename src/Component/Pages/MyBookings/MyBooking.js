@@ -27,7 +27,6 @@ const MyBooking = () => {
                 })
         }
     }
-
     return (
         <>
             {
@@ -46,7 +45,7 @@ const MyBooking = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        myBooking.map(booking =>
+                                        myBooking.filter(id => id.Email === user.email).map(booking =>
                                             <MyBookingComp
                                                 key={booking._id}
                                                 booking={booking}

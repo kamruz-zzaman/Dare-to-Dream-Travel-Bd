@@ -8,6 +8,7 @@ const Booking = (props) => {
     const { Name, Price } = props.data;
     const { user } = useAuth();
     const { register, handleSubmit, reset, setValue } = useForm();
+    // make hook form respons
     const onSubmit = data => {
         fetch('https://dark-tomb-38660.herokuapp.com/booking', {
 
@@ -92,6 +93,7 @@ const Booking = (props) => {
                     <div className="flex justify-center">
                         <button className='py-2 px-3 rounded-lg border-2 border-yellow-400 mt-5 hover:bg-yellow-400 hover:text-white'>Confirm</button>
                     </div>
+                    {/* set default data */}
                     {setValue("Status", "Pending")}
                 </form>
             </div>

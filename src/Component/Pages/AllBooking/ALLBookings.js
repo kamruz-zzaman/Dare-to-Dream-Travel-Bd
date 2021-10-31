@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Spinner from '../Spinner/Spinner';
 import ALLBooking from './ALLBooking';
 
+// fetch all booking data
 const ALLBookings = () => {
     const [myBooking, SetBooking] = useState([]);
     useEffect(() => {
@@ -10,6 +11,7 @@ const ALLBookings = () => {
             .then(data => SetBooking(data));
     }, []);
 
+    // fetch delet booking data
     const handleDeletUser = (id) => {
         const delet = window.confirm('Are Your Sure For Delation?');
         if (delet) {
@@ -26,6 +28,8 @@ const ALLBookings = () => {
                 })
         }
     }
+
+    // fetch update booking data
     const handleUpdateUser = (id) => {
         const confirm = window.confirm('Are you sure for Approve Booking?');
         if (confirm) {
@@ -51,6 +55,7 @@ const ALLBookings = () => {
         <>
             {
                 myBooking[0] ?
+                    // load spinner
                     myBooking.length === 0 ? <Spinner></Spinner> :
                         <div className='overflow-x-auto'>
                             <table class="table-auto mx-5 mt-10 ">
@@ -64,6 +69,7 @@ const ALLBookings = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {/* transfer data */}
                                     {
                                         myBooking.map(booking =>
                                             <ALLBooking
